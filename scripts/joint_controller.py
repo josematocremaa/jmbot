@@ -10,21 +10,21 @@ class JointController(Node):
 
         # Configurar el puerto serie
         self.puerto = "/dev/ttyACM0"  # Cambiar a COM9 si usas Windows
-        self.baudRate = 9600
+        self.baudRate = 19200
         self.ser = serial.Serial(self.puerto, self.baudRate, timeout=1)
         time.sleep(2)  # Esperar que la conexión serial se estabilice
 
         # Suscriptor de ROS 2 al tópico 'topic' que recibe un array de 5 números
         self.subscription = self.create_subscription(
             Float64MultiArray,
-            'topic',
+            '/position_controller/commands',
             self.listener_callback,
             10)
         self.subscription  # Prevent unused variable warning
 
     def listener_callback(self, msg):
         """Convierte el array recibido en el formato deseado y lo envía por serial."""
-        # Convertir el array en la cadena con el formato <+xxx-xxx+xxx-xxx+xxx>
+        # Convertir el array en la cadena con el formato <+xxx-xxx+xxx-xxx+xxx+xxx>
         mensaje_formateado = self.formatear_mensaje(msg.data)
 
         # Enviar el mensaje por el puerto serial
@@ -35,7 +35,9 @@ class JointController(Node):
         self.get_logger().info(f'Enviando: {mensaje_formateado}')
 
     def formatear_mensaje(self, data):
-        """Convierte un array de 5 números en la cadena <+xxx-xxx+xxx-xxx+xxx>."""
+        for i in range(6):
+           data[i]=data[i]*57.2958 
+       
         cadena = "<"
         for num in data:
             signo = "+" if num >= 0 else "-"  # Determinar el signo

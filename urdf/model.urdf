@@ -104,7 +104,7 @@
   <link name="brazomedio">
     <visual>
       <geometry>
-        <mesh filename="package://jmbot/urdf/meshes/brazomedio.obj"/>
+        <mesh filename="package://jmbot/urdf/meshes/brazomedio_bueno.obj"/>
       </geometry>
       <material name="green">
         <color rgba="0.0 1.0 0.0 1"/>
@@ -112,7 +112,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://jmbot/urdf/meshes/brazomedio.stl"/>
+        <mesh filename="package://jmbot/urdf/meshes/brazomedio_bueno.stl"/>
       </geometry>
     </collision>
     <inertial>
@@ -134,7 +134,7 @@
   <link name="UNION">
     <visual>
       <geometry>
-        <mesh filename="package://jmbot/urdf/meshes/UNION.obj"/>
+        <mesh filename="package://jmbot/urdf/meshes/UNION_bueno.obj"/>
       </geometry>
       <material name="blue2">
         <color rgba="0.0 0.0 1.0 1"/>
@@ -142,7 +142,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://jmbot/urdf/meshes/UNION.stl"/>
+        <mesh filename="package://jmbot/urdf/meshes/UNION_bueno.stl"/>
       </geometry>
     </collision>
     <inertial>
@@ -164,7 +164,7 @@
   <link name="pinza">
     <visual>
       <geometry>
-        <mesh filename="package://jmbot/urdf/meshes/Pinza_base_cambio.obj"/>
+        <mesh filename="package://jmbot/urdf/meshes/Pinza_base_bueno.obj"/>
       </geometry>
       <material name="pink2">
         <color rgba="1.0 0.4 0.7 1"/>
@@ -172,7 +172,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://jmbot/urdf/meshes/Pinza_base_cambio.stl"/>
+        <mesh filename="package://jmbot/urdf/meshes/Pinza_base_bueno.stl"/>
       </geometry>
     </collision>
     <inertial>
@@ -195,7 +195,7 @@
   <link name="pinza_extremo">
     <visual>
       <geometry>
-        <mesh filename="package://jmbot/urdf/meshes/Pinza_cambio.obj"/>
+        <mesh filename="package://jmbot/urdf/meshes/Pinza_bueno.obj"/>
       </geometry>
       <material name="red">
         <color rgba="1.0 0.0 0.0 1"/>
@@ -203,7 +203,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://jmbot/urdf/meshes/Pinza_cambio.stl"/>
+        <mesh filename="package://jmbot/urdf/meshes/Pinza_bueno.stl"/>
       </geometry>
     </collision>
     <inertial>

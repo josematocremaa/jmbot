@@ -7,7 +7,7 @@ from sensor_msgs.msg import Joy
 from std_msgs.msg import Int8
 
 FACTOR_LIN = 100
-FACTOR_ROT = 0
+FACTOR_ROT = 2
 
 class SpacenavCntroller(Node):
     def __init__(self):
@@ -28,7 +28,7 @@ class SpacenavCntroller(Node):
         # Posición integrada y última velocidad leída
         #self.position = [0.0, 0.0, 0.0]
         #self.last_velocity = [0.0, 0.0, 0.0]
-        self.dt = 0.01  # 10 Hz
+        self.dt = 0.01  # 100 Hz
         self.timer = self.create_timer(self.dt, self.timer_callback)
 
         self.joy=[0.0,0.0,0.0,0.0,0.0,0.0]

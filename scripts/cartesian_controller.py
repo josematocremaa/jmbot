@@ -56,7 +56,7 @@ class CartesianController(Node):
 
         self.buttons = 0
 
-        a, b, c, d, e  = 140, 106, 140, 100, 0
+        a, b, c, d, e  = 140, 106, 140, 70, 28
 
         self.chain = kdl.Chain()
         #                  A alpha D theta
